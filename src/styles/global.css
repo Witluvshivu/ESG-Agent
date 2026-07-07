@@ -1,0 +1,19 @@
+/* Witluvshivu design tokens — authoritative, do not edit values here.
+   Update by syncing from github.com/Witluvshivu/witluvshivu */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/effects.css";
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-sans, Geist, system-ui, sans-serif);
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 14px;
+  line-height: 1.5;
+}
+a { color: var(--info); }
+a:hover { color: var(--foreground); }

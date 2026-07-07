@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:'Patrick Hand',system-ui,sans-serif;color:#222}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 15px/1.2 'Patrick Hand',sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;margin-bottom:8px}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 14px/1.3 'Patrick Hand',sans-serif;color:rgba(0,0,0,.6)}
+.dv-card{max-width:100%;background:#fff;border:1.5px solid #2a2a2a;border-radius:8px;box-shadow:3px 3px 0 rgba(0,0,0,.12);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:14px/1.5 'Patrick Hand',sans-serif;color:rgba(0,0,0,.55)}
+.dv-group{font:600 12px ui-monospace,Menlo,monospace;color:rgba(0,0,0,.45);margin:26px 0 14px;letter-spacing:.06em;text-transform:uppercase}
+.wf{font-size:13px;line-height:1.35}
+.wf .bx{border:1.5px solid #333;border-radius:5px;background:#fff}
+.wf .dash{border:1.5px dashed #999;border-radius:5px;background:#fafaf8}
+.wf .ln{height:7px;background:#ddd;border-radius:3px}
+.wf .lnd{height:7px;background:#eee;border-radius:3px}
+.wf .chip{display:inline-flex;align-items:center;gap:4px;border:1.5px solid #333;border-radius:99px;padding:1px 9px;font-size:12px;background:#fff;white-space:nowrap}
+.wf .tag{display:inline-block;border-radius:4px;padding:0 6px;font-size:11px;background:#eee;border:1px solid #ccc;white-space:nowrap}
+.wf .note{font-family:ui-monospace,Menlo,monospace;font-size:9.5px;color:#b06a00;line-height:1.3}
+.wf .amber{color:#b06a00;border-color:#b06a00}
+.wf .blue{color:#2a78d6;border-color:#2a78d6}
+.wf .mut{color:#888}
+.wf .hd{font-weight:400;font-size:14px}
+.wf .row{display:flex;align-items:center;gap:6px}
+.wf .col{display:flex;flex-direction:column;gap:6px}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">ESG AI agent — chat workspace, answers, Data Hub, upload flow, first-open (BRSR context, Meridian Textiles Ltd)</span></div>
+
+  <div class="dv-group">A · Chat workspace layout — 3 directions</div>
+  <div class="dv-opts">
+
+    <!-- 1a classic -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Classic — full sidebar + Claude-like chat</div>
+      <div class="dv-card wf" style="width:480px">
+        <div style="display:flex;height:420px">
+          <div style="width:130px;border-right:1.5px solid #333;padding:10px;display:flex;flex-direction:column;gap:5px;background:#fafaf8">
+            <div class="hd" style="margin-bottom:4px">Witluvshivu ESG</div>
+            <div class="chip blue" style="justify-content:center">+ New chat</div>
+            <div class="mut" style="font-size:11px;margin-top:6px">MODULES</div>
+            <div>Chat home</div><div>Maturity analysis</div><div>Materiality</div><div>Data hub <span class="tag">2</span></div><div>Surveys</div><div>Peer benchmarking</div><div>Reports</div>
+            <div class="mut" style="font-size:11px;margin-top:6px">WORKSPACE</div>
+            <div>My tasks <span class="tag amber">3</span></div><div>Approvals <span class="tag amber">2</span></div><div>Compliance calendar</div><div>Org structure</div>
+            <div style="margin-top:auto" class="row"><div class="bx" style="width:22px;height:22px;border-radius:99px"></div><div>Admin ▾ · ☾</div></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column">
+            <div style="border-bottom:1.5px solid #333;padding:6px 12px" class="row"><span>BRSR FY26 · Meridian Textiles</span><span class="mut" style="margin-left:auto">history ▾</span></div>
+            <div style="flex:1;padding:12px;display:flex;flex-direction:column;gap:10px">
+              <div class="bx" style="align-self:flex-end;max-width:70%;padding:6px 10px;background:#f2f2f2">What's our maturity score vs industry?</div>
+              <div class="dash" style="align-self:flex-start;width:85%;padding:8px 10px">
+                <div class="col"><div class="ln" style="width:80%"></div><div class="ln" style="width:60%"></div>
+                <div class="dash" style="height:56px;display:flex;align-items:center;justify-content:center" class="mut">rich answer block — see <a class="dv-oid" href="#1d">1d</a>/<a class="dv-oid" href="#1e">1e</a></div></div>
+              </div>
+            </div>
+            <div style="padding:10px;border-top:1.5px solid #333">
+              <div class="bx" style="padding:8px 10px" class="row"><span class="mut">Ask, or type / for commands…</span></div>
+              <div class="row" style="margin-top:6px"><span class="chip">📎 upload</span><span class="chip">/maturity</span><span class="chip">/compare</span><span class="chip">/upload</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="max-width:480px">safest, most familiar. modules always one click away; badges surface pending work.</div>
+    </div>
+
+    <!-- 1b briefing split -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Briefing split — icon rail + chat + live context rail</div>
+      <div class="dv-card wf" style="width:520px">
+        <div style="display:flex;height:420px">
+          <div style="width:44px;border-right:1.5px solid #333;padding:8px 0;display:flex;flex-direction:column;align-items:center;gap:10px;background:#fafaf8">
+            <div class="bx" style="width:24px;height:24px"></div>
+            <div class="bx" style="width:24px;height:24px;border-style:dashed"></div>
+            <div class="bx" style="width:24px;height:24px;border-style:dashed"></div>
+            <div class="bx" style="width:24px;height:24px;border-style:dashed"></div>
+            <div class="note" style="writing-mode:vertical-rl">icon rail: all modules, hover = flyout</div>
+            <div class="bx" style="width:24px;height:24px;border-radius:99px;margin-top:auto"></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;border-right:1.5px solid #333">
+            <div style="flex:1;padding:12px;display:flex;flex-direction:column;gap:10px">
+              <div class="bx" style="align-self:flex-end;max-width:75%;padding:6px 10px;background:#f2f2f2">Compare our Scope 1 to Arvind</div>
+              <div class="dash" style="width:88%;padding:8px 10px"><div class="col"><div class="ln" style="width:75%"></div><div class="dash" style="height:48px"></div><div class="ln" style="width:50%"></div></div></div>
+            </div>
+            <div style="padding:10px;border-top:1.5px solid #333"><div class="bx" style="padding:8px 10px"><span class="mut">Ask anything…</span></div></div>
+          </div>
+          <div style="width:150px;padding:10px;display:flex;flex-direction:column;gap:8px;background:#fafaf8">
+            <div class="hd">Today</div>
+            <div class="bx amber" style="padding:6px;font-size:11.5px">⚠ BRSR filing in 21 days · 4 fields missing</div>
+            <div class="bx" style="padding:6px;font-size:11.5px">Peer alert: Arvind published FY26 report</div>
+            <div class="bx" style="padding:6px;font-size:11.5px">Supplier survey at 41% response</div>
+            <div class="hd" style="margin-top:4px">Approvals <span class="tag amber">2</span></div>
+            <div class="dash" style="padding:6px;font-size:11.5px">Energy audit.xlsx → "Emissions FY26" <b>approve?</b></div>
+            <div class="note">rail = proactive alerts + approvals; every card is clickable into chat</div>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="max-width:520px">chat stays focused; the agent's proactive side lives in a persistent rail instead of interrupting the thread.</div>
+    </div>
+
+    <!-- 1c command canvas -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Novel — pinboard canvas, chat as bottom dock</div>
+      <div class="dv-card wf" style="width:520px">
+        <div style="display:flex;height:420px">
+          <div style="width:110px;border-right:1.5px solid #333;padding:10px;display:flex;flex-direction:column;gap:6px;background:#fafaf8;font-size:12px">
+            <div class="hd">Modules</div>
+            <div>Maturity</div><div>Materiality</div><div>Data hub</div><div>Surveys</div><div>Peers</div><div>Tasks · Approvals</div><div>Calendar</div><div>Org</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column">
+            <div style="flex:1;position:relative;background:repeating-linear-gradient(#fff,#fff 23px,#f3f3f0 24px);padding:10px">
+              <div class="bx" style="position:absolute;left:12px;top:12px;width:150px;padding:6px"><b>Maturity 62/100</b><div class="ln" style="width:70%;margin-top:4px"></div><div class="note">pinned from chat</div></div>
+              <div class="bx" style="position:absolute;left:180px;top:40px;width:160px;padding:6px">Peer compare<div class="dash" style="height:40px;margin-top:4px"></div></div>
+              <div class="bx amber" style="position:absolute;left:60px;top:150px;width:170px;padding:6px">⚠ Data gaps: 4 BRSR fields<div class="lnd" style="width:80%;margin-top:4px"></div></div>
+              <div class="dash" style="position:absolute;right:12px;bottom:10px;width:120px;padding:6px" class="note">drag any answer here to pin → becomes your working board / report draft</div>
+            </div>
+            <div style="border-top:1.5px solid #333;padding:8px 10px;background:#fafaf8">
+              <div class="bx" style="padding:8px 10px" class="row"><span class="mut">Ask the agent… answers land as cards ↑</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="max-width:520px">beyond chat: answers become persistent tiles the admin arranges into a briefing/report draft. chat is the input, the board is the output.</div>
+    </div>
+  </div>
+
+  <div class="dv-group">B · How a rich answer renders in-thread</div>
+  <div class="dv-opts">
+
+    <!-- 1d scorecard -->
+    <div class="dv-opt" id="1d">
+      <div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Scorecard answer — metrics + trend + citations</div>
+      <div class="dv-card wf" style="width:400px">
+        <div style="padding:12px" class="col">
+          <div>Your BRSR maturity is <b>62/100</b> — up 7 since FY25, 8 below the textile-sector median (70).</div>
+          <div class="row">
+            <div class="bx" style="flex:1;padding:6px;text-align:center"><b style="font-size:18px">62</b><div class="mut" style="font-size:11px">Maturity</div></div>
+            <div class="bx" style="flex:1;padding:6px;text-align:center"><b style="font-size:18px">70</b><div class="mut" style="font-size:11px">Industry median</div></div>
+            <div class="bx" style="flex:1;padding:6px;text-align:center"><b style="font-size:18px">+7</b><div class="mut" style="font-size:11px">vs FY25</div></div>
+          </div>
+          <div class="dash" style="height:64px;padding:4px;display:flex;align-items:flex-end;gap:4px">
+            <div style="width:16%;height:30%;background:#ddd"></div><div style="width:16%;height:42%;background:#ddd"></div><div style="width:16%;height:48%;background:#ccc"></div><div style="width:16%;height:62%;background:#333"></div>
+            <div class="note" style="margin-left:auto;align-self:flex-start">trend FY23→26</div>
+          </div>
+          <div class="row" style="flex-wrap:wrap"><span class="note">sources:</span><span class="tag">Maturity file Q3.xlsx</span><span class="tag">Peer set 2026.csv</span></div>
+          <div class="row"><span class="chip blue">Open Maturity analysis →</span><span class="chip">Draft report section</span></div>
+        </div>
+      </div>
+      <div class="note" style="max-width:400px">every claim traceable to an uploaded file; deep-link chip jumps to the full module with this query pre-loaded.</div>
+    </div>
+
+    <!-- 1e comparison -->
+    <div class="dv-opt" id="1e">
+      <div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Comparison answer — peer bars + follow-ups</div>
+      <div class="dv-card wf" style="width:400px">
+        <div style="padding:12px" class="col">
+          <div>Scope 1 intensity vs peers (tCO₂e/₹cr revenue):</div>
+          <div class="col" style="gap:4px">
+            <div class="row"><span style="width:80px">Meridian</span><div style="height:12px;width:62%;background:#333;border-radius:3px"></div><span>4.1</span></div>
+            <div class="row"><span style="width:80px">Arvind</span><div style="height:12px;width:48%;background:#bbb;border-radius:3px"></div><span>3.2</span></div>
+            <div class="row"><span style="width:80px">Sector avg</span><div style="height:12px;width:55%;background:#ddd;border-radius:3px"></div><span>3.7</span></div>
+          </div>
+          <div class="dash amber" style="padding:6px;font-size:12px">⚠ Your figure uses FY25 data — FY26 energy audit is still pending approval. <b>Approve it now?</b></div>
+          <div class="row" style="flex-wrap:wrap"><span class="note">sources:</span><span class="tag">Energy audit FY25.xlsx</span><span class="tag">Arvind BRSR FY26 (public)</span></div>
+          <div class="row" style="flex-wrap:wrap"><span class="chip">Why are we higher?</span><span class="chip">Reduction levers</span><span class="chip blue">Open Peer benchmarking →</span></div>
+        </div>
+      </div>
+      <div class="note" style="max-width:400px">answer flags its own data-quality problems inline — the "smart admin" moment.</div>
+    </div>
+  </div>
+
+  <div class="dv-group">C · Data Hub — 2 directions</div>
+  <div class="dv-opts">
+
+    <!-- 1f library -->
+    <div class="dv-opt" id="1f">
+      <div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Library — files table + approvals drawer</div>
+      <div class="dv-card wf" style="width:520px">
+        <div style="display:flex;height:340px">
+          <div style="flex:1;padding:12px;border-right:1.5px solid #333" class="col">
+            <div class="row"><span class="hd">Data hub</span><span class="chip" style="margin-left:auto">↑ Upload</span></div>
+            <div class="row"><span class="chip">All</span><span class="chip">Maturity</span><span class="chip">Emissions</span><span class="chip">Suppliers</span><span class="chip">Revenue</span></div>
+            <div class="bx" style="padding:0">
+              <div class="row" style="padding:5px 8px;border-bottom:1px solid #ccc;font-size:11px" class="mut"><span style="flex:2">FILE</span><span style="flex:1">CATEGORY</span><span style="flex:1">STATUS</span></div>
+              <div class="row" style="padding:5px 8px;border-bottom:1px solid #eee"><span style="flex:2">Maturity file Q3.xlsx</span><span style="flex:1" class="tag">Maturity</span><span style="flex:1" class="tag">✓ approved</span></div>
+              <div class="row" style="padding:5px 8px;border-bottom:1px solid #eee"><span style="flex:2">Revenue 2024.csv</span><span style="flex:1" class="tag">Revenue</span><span style="flex:1" class="tag">✓ approved</span></div>
+              <div class="row" style="padding:5px 8px;border-bottom:1px solid #eee;background:#fdf6ec"><span style="flex:2">Energy audit FY26.xlsx</span><span style="flex:1" class="tag">Emissions?</span><span style="flex:1" class="tag amber">pending</span></div>
+              <div class="row" style="padding:5px 8px"><span style="flex:2">Supplier assessment.pdf</span><span style="flex:1" class="tag">Suppliers</span><span style="flex:1" class="tag amber">pending</span></div>
+            </div>
+            <div class="note">every row: which chats/reports cite it, uploaded by whom, when</div>
+          </div>
+          <div style="width:150px;padding:10px;background:#fafaf8" class="col">
+            <div class="hd">Coverage</div>
+            <div class="bx" style="padding:6px;font-size:11.5px">BRSR fields covered<div class="ln" style="width:78%;margin-top:4px;background:#333"></div><b>78%</b></div>
+            <div class="dash amber" style="padding:6px;font-size:11.5px">Missing: water use, waste, 2 more</div>
+            <div class="chip blue" style="justify-content:center">Ask agent to chase ↗</div>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="max-width:520px">classic hub, but with a coverage meter — files are means, BRSR completeness is the goal.</div>
+    </div>
+
+    <!-- 1g chat-native -->
+    <div class="dv-opt" id="1g">
+      <div class="dv-olabel"><a class="dv-oid" href="#1g">1g</a>Chat-native hub — coverage map first, ask bar</div>
+      <div class="dv-card wf" style="width:420px">
+        <div style="padding:12px;height:340px" class="col">
+          <div class="hd">Data hub · Meridian FY26</div>
+          <div class="row" style="gap:4px">
+            <div class="bx" style="flex:1;padding:5px;text-align:center;font-size:11px">Maturity<br><b>✓ 3 files</b></div>
+            <div class="bx" style="flex:1;padding:5px;text-align:center;font-size:11px">Emissions<br><b>✓ 2</b></div>
+            <div class="dash amber" style="flex:1;padding:5px;text-align:center;font-size:11px">Water<br><b>0 — gap</b></div>
+            <div class="bx" style="flex:1;padding:5px;text-align:center;font-size:11px">Suppliers<br><b>1 pending</b></div>
+          </div>
+          <div class="note">category tiles = live coverage map; tap a gap → agent drafts a request to the data owner (from org structure)</div>
+          <div class="bx" style="padding:8px 10px"><span class="mut">Ask your data… "show all emissions files used in FY26 report"</span></div>
+          <div class="dash" style="flex:1;padding:8px" class="col">
+            <div class="ln" style="width:65%"></div><div class="lnd" style="width:80%"></div><div class="lnd" style="width:55%"></div>
+            <div class="note">results render as file cards with citations, same grammar as chat</div>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="max-width:420px">hub is just another conversation with the same agent — one mental model everywhere.</div>
+    </div>
+  </div>
+
+  <div class="dv-group">D · Upload → categorize → approve → stored (flow strip)</div>
+  <div class="dv-opts">
+    <div class="dv-opt" id="1h">
+      <div class="dv-olabel"><a class="dv-oid" href="#1h">1h</a>Full upload flow, inside the chat thread</div>
+      <div class="dv-card wf" style="width:860px">
+        <div style="display:flex">
+          <div style="flex:1;padding:10px;border-right:1.5px dashed #999" class="col">
+            <div class="note">1 · DROP</div>
+            <div class="dash blue" style="height:90px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px">drop file anywhere in chat<br>supplier_assessment_v3.pdf</div>
+          </div>
+          <div style="flex:1.3;padding:10px;border-right:1.5px dashed #999" class="col">
+            <div class="note">2 · AI CATEGORIZES</div>
+            <div class="bx" style="padding:8px;font-size:12px">Looks like a <b>supplier assessment</b>, FY26, 142 vendors.<div class="row" style="margin-top:6px;flex-wrap:wrap"><span class="tag">Category: Supplier assessment ▾</span><span class="tag">Year: FY26 ▾</span></div><div class="note" style="margin-top:4px">editable before approval</div></div>
+          </div>
+          <div style="flex:1;padding:10px;border-right:1.5px dashed #999" class="col">
+            <div class="note">3 · ADMIN APPROVES</div>
+            <div class="bx" style="padding:8px;font-size:12px" class="col"><span>Store in Data hub?</span><div class="row"><span class="chip" style="background:#333;color:#fff">Approve</span><span class="chip">Edit</span><span class="chip mut">Discard</span></div><div class="note">until approved, agent won't use it in answers</div></div>
+          </div>
+          <div style="flex:1;padding:10px" class="col">
+            <div class="note">4 · STORED + PUT TO WORK</div>
+            <div class="bx" style="padding:8px;font-size:12px">✓ Saved to <b>Data hub › Suppliers</b><div class="row" style="margin-top:6px;flex-wrap:wrap"><span class="chip">Summarize it</span><span class="chip">Update supplier score</span><span class="chip blue">View in hub →</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="note" style="max-width:860px">approval is the trust gate: nothing enters the agent's knowledge without an explicit admin yes. same strip works from the Data hub upload button.</div>
+    </div>
+  </div>
+
+  <div class="dv-group">E · First open / empty state</div>
+  <div class="dv-opts">
+    <div class="dv-opt" id="1i">
+      <div class="dv-olabel"><a class="dv-oid" href="#1i">1i</a>Morning briefing opener</div>
+      <div class="dv-card wf" style="width:380px">
+        <div style="padding:14px" class="col">
+          <div class="hd">Good morning. 3 things need you:</div>
+          <div class="bx amber" style="padding:7px;font-size:12.5px">1 · BRSR filing in 21 days — 4 fields still missing data</div>
+          <div class="bx" style="padding:7px;font-size:12.5px">2 · 2 files awaiting your approval in Data hub</div>
+          <div class="bx" style="padding:7px;font-size:12.5px">3 · Supplier survey response is 41% — send a reminder?</div>
+          <div class="row"><span class="chip" style="background:#333;color:#fff">Work through these</span><span class="chip mut">Skip</span></div>
+          <div class="bx" style="padding:8px 10px;margin-top:4px"><span class="mut">Or ask anything…</span></div>
+        </div>
+      </div>
+      <div class="note" style="max-width:380px">the "standing 3 requirements" become a daily generated brief — the agent opens with work, not a blank box.</div>
+    </div>
+    <div class="dv-opt" id="1j">
+      <div class="dv-olabel"><a class="dv-oid" href="#1j">1j</a>Claude-like minimal greeting</div>
+      <div class="dv-card wf" style="width:380px">
+        <div style="padding:14px;text-align:center" class="col">
+          <div class="hd" style="font-size:17px;margin-top:16px">How can I help with Meridian's ESG today?</div>
+          <div class="bx" style="padding:9px 10px;text-align:left;margin-top:8px"><span class="mut">Ask, drop a file, or type /…</span></div>
+          <div class="col" style="gap:5px;margin-top:4px">
+            <div class="chip" style="justify-content:center">What's our maturity score vs industry?</div>
+            <div class="chip" style="justify-content:center">Compare our emissions to Arvind</div>
+            <div class="chip" style="justify-content:center">What's missing for the BRSR filing?</div>
+          </div>
+          <div class="note" style="margin-top:8px">3 suggestions rotate based on deadlines + gaps, not static</div>
+        </div>
+      </div>
+      <div class="note" style="max-width:380px">calm and familiar; proactive stuff stays in the sidebar badges instead.</div>
+    </div>
+  </div>
+
+  <p class="dv-next">Try next: "hi-fi the <a class="dv-oid" href="#1b">1b</a> layout with <a class="dv-oid" href="#1d">1d</a> answers and the <a class="dv-oid" href="#1i">1i</a> opener" · "riff more on the <a class="dv-oid" href="#1c">1c</a> pinboard idea" · "combine <a class="dv-oid" href="#1f">1f</a>'s coverage meter into <a class="dv-oid" href="#1g">1g</a>"</p>
+</section>
+
+</x-dc>
+</body>
+</html>
